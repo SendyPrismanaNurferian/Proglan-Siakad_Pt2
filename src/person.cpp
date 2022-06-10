@@ -1,7 +1,6 @@
 #include <iostream>
 #include "include/person.hpp"
 
-//ada penambahan jenis kelamin yang saya buat
 person::person(std::string id, std::string nama, std::string jeniskelamin, int dd, int mm, int yy)
 		: id(id), nama(nama), jeniskelamin(jeniskelamin), dd(dd), mm(mm), yy(yy)
 {
@@ -53,6 +52,3 @@ int person::getTahunLahir()
 {
 	return this->yy;
 }
-
-
-

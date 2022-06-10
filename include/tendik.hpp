@@ -12,7 +12,7 @@ private:
 
 public:
 	tendik(std::string id, std::string nama, std::string jeniskelamin, int dd, int mm, int yy, 
-				std::string npp, std::string unit); //ada penambahan jenis kelamin yang saya buat
+				std::string npp, std::string unit); 
 //Fungsi untuk akses Unit
 	void setUnit(std::string unit);
 	std::string getUnit();	

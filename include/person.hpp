@@ -7,7 +7,7 @@ class person {
 private:
 	std::string id;
 	std::string nama;
-	std::string jeniskelamin; //data tambahan yang saya buat 
+	std::string jeniskelamin; 
 	int dd, mm, yy;
 
 public:

@@ -14,10 +14,12 @@ private:
 	int skslulus;
 	float ipk;
 	std::vector<float> ips;
+	int skstempuhsemesterini;
+	std::vector <std::string> DaftarMataKuliah;
 
 public:
 	mahasiswa(std::string id, std::string nama, std::string jeniskelamin, int dd, int mm, int yy,
-					std::string nrp, std::string departemen, int tahunmasuk); //ada penambahan jenis kelamin yang saya buat
+					std::string nrp, std::string departemen, int tahunmasuk); 
 //Fungsi untuk akses NPP
     void setNRP(std::string nrp);
     std::string getNRP();
@@ -33,12 +35,17 @@ public:
 //Fungsi untuk akses SKS
 	void setSKSLulus(int skslulus);
 	int getSKSLulus();
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// BELUM 
+//Fungsi yang saya jalankan di program kedua ini yaitu ada:
 	void hitungIPK();
-
+	float getIPK(); //Fungsi untuk mengambil IPK
+	
 	void setIPS(int semester, float ips);
 	float getIPS(int semester);
 	std::vector<float> getAllIPS();
+
+	int getSKSTempuh();
+	void TambahMataKuliah(std::string MataKuliah, int SKS);
+	void TampilDaftarMatkul();
 };
 
 #endif

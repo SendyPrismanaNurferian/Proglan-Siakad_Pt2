@@ -66,7 +66,12 @@ int mahasiswa::getSKSLulus()
 }
 ////////////////////////////////////////////////////////////////////////////////////////////
 void mahasiswa::hitungIPK()
-{
+{ float total = 0;
+    for(long unsigned int i = 0; i < ips.size(); i++){
+        total += ips[i];
+    }
+    total /= (this->getSemester()-1);
+    this->ipk = total;
 }
 
 void mahasiswa::setIPS(int semester, float ips)
@@ -89,4 +94,29 @@ float mahasiswa::getIPS(int semester)
 std::vector<float> mahasiswa::getAllIPS()
 {
 	return this->ips;
+}
+
+int mahasiswa::getSKSTempuh()
+{
+	return this->skstempuhsemesterini;
+}
+
+void mahasiswa::TambahMataKuliah(std::string MataKuliah, int sks)
+{
+	if ((this->skstempuhsemesterini + sks) > 24){
+		std::cout <<"Mohon maaf SKS sudah melebihi batas maksimal, mohon di cek kembali!" << std::endl;
+	} else{
+		this->skstempuhsemesterini += sks;
+		this->DaftarMataKuliah.push_back(MataKuliah + " (" + std::to_string(sks) + " sks)");
+	}
+}
+
+void mahasiswa::TampilDaftarMatkul()
+{
+	for(int i = 0; i < this->DaftarMataKuliah.size(); i++){
+		std::cout << this->DaftarMataKuliah[i];
+		if(i != (this->DaftarMataKuliah.size()-1)){
+			std::cout << ",";
+		}
+	}
 }
