@@ -69,7 +69,7 @@ int mahasiswa::getSKSLulus()
 {
 	return this->skslulus;
 }
-////////////////////////////////////////////////////////////////////////////////////////////
+
 void mahasiswa::hitungIPK()
 { float total = 0;
     for(long unsigned int i = 0; i < ips.size(); i++){
@@ -118,7 +118,7 @@ void mahasiswa::TambahMataKuliah(std::string MataKuliah, int sks)
 
 void mahasiswa::TampilDaftarMatkul()
 {
-	for(int i = 0; i < this->DaftarMataKuliah.size(); i++){
+	for(unsigned int i = 0; i < this->DaftarMataKuliah.size(); i++){
 		std::cout << this->DaftarMataKuliah[i];
 		if(i != (this->DaftarMataKuliah.size()-1)){
 			std::cout << ", ";
