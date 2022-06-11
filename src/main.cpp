@@ -33,10 +33,10 @@ int main(){
         system("clear");
 		cout << "Selamat datang di Universitas Kembang Lambe Tunas Bangsa" << endl << endl;
 		cout << "Data Statistik :" << endl;
-		cout << "  1. Jumlah Mahasiswa             : " << recMhs.size() << "mahasiswa" << endl;
-		cout << "  2. Jumlah Dosen                 : " << recDosen.size() << "dosen" << endl;
-		cout << "  3. Jumlah Tenaga Kependidikan   : " << recTendik.size() << "tenaga kependidikan" << endl;
-		cout << "  4. Jumlah Mata Kuliah           : " << recMatkul.size() << "mata kuliah" << endl;
+		cout << "  1. Jumlah Mahasiswa             : " << recMhs.size() << " mahasiswa" << endl;
+		cout << "  2. Jumlah Dosen                 : " << recDosen.size() << " dosen" << endl;
+		cout << "  3. Jumlah Tenaga Kependidikan   : " << recTendik.size() << " tenaga kependidikan" << endl;
+		cout << "  4. Jumlah Mata Kuliah           : " << recMatkul.size() << " mata kuliah" << endl;
         cout << endl;
         cout << "Silahkan Pilih Salah Satu Menu";
 		cout << "Menu: " << endl;
@@ -372,14 +372,14 @@ int main(){
                     if(tampilkanDatabase == 'y' || tampilkanDatabase == 'Y'){
                     //Menampilkan Database Dosen
                     cout << "\tData dari Dosen pada Mata Kuliah ini : " << recMatkul[i].getNama() <<": \n";
-                    for(int j = 0; j < recMatkul[i].getDatabaseDsn().size(); j++){
+                    for(unsigned int j = 0; j < recMatkul[i].getDatabaseDsn().size(); j++){
                         cout << "\t\t" << j+1 << "." << (recMatkul[i].getDatabaseDsn())[j].nama;
                         cout << " (" << (recMatkul[i].getDatabaseDsn())[j].npp << ") - ";
                         cout << (recMatkul[i].getDatabaseDsn())[j].departemen << endl;
                     }
                     //Menampilkan Database Mahasiswa
                     cout << "\t Data dari Mahasiswa pada Mata Kuliah ini : " << recMatkul[i].getNama() <<" :\n";
-                    for(int j=0; j<recMatkul[i].getDatabaseMhs().size(); j++){
+                    for(unsigned int j = 0; j<recMatkul[i].getDatabaseMhs().size(); j++){
                         cout << "\t\t" << j+1 << "." << (recMatkul[i].getDatabaseMhs())[j].nama;
                         cout << "(" << (recMatkul[i].getDatabaseMhs())[j].nrp << ") - ";
                         cout << (recMatkul[i].getDatabaseMhs())[j].departemen << endl;
