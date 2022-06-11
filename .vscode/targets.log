@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This program built for i386-pc-mingw32
  
 
-# Make data base, di tampilkan pada Sat Jun 11 14:11:02 2022
+# Make data base, di tampilkan pada Sat Jun 11 17:37:39 2022
 
 # Variabel
 
@@ -49,10 +49,7 @@ MAKEFILE_LIST :=  makefile
 # environment
 TMP = C:\Users\ASUS\AppData\Local\Temp
 # makefile (from `makefile', line 3)
-SOURCES = src/main.cpp src/perso 
-make.exe: *** Tidak terdapat aturan untuk membuat target `all'. Berhenti.
-
-n.cpp src/mahasiswa.cpp src/dosen.cpp src/tendik.cpp src/matakuliah.cpp
+SOURCES = src/main.cpp src/person.cpp src/mahasiswa.cpp src/dosen.cpp src/tendik.cpp src/matakuliah.cpp
 # makefile (from `makefile', line 2)
 CXXFLAGS = --std=c++17 -O3 -Wall -Wextra -I.
 # environment
@@ -62,11 +59,12 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-6342a470-6087-44d2-91d9-ec7cc4b50bbb-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-74ecfe46-6711-4d5b-8efb-b7877c637b04-sock
 # environment
 VSCODE_CWD = C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code
 # environment
-PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\MinGW\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;C:\MinGW\bin;C:\Users\ASUS\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\bin
+PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\MinGW\bin;C:\Program Files (x86)\GnuWin32\bin;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;C:\MinGW\bin;C:\Users\ASUS\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86 
+)\GnuWin32\bin;C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\bin
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
@@ -88,7 +86,7 @@ ELECTRON_RUN_AS_NODE = 1
 # otomatis
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19748_EVIJJFXFUAWZTUXJ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9464_RKXQCSTBPYYTBAPK
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -196,7 +194,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 19748
+VSCODE_PID = 9464
 # environment
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-50FK9FB1
 # variable set hash-table stats:
@@ -211,13 +209,13 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-50FK9FB1
 # C:\Users\ASUS\AppData\Local\GitHubDesktop\bin (key C:/Users/ASUS/AppData/Local/GitHubDesktop/bin, mtime 1649386391): 4 files, tidak tidak mungkin.
 # C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1634087115): 30 files, tidak tidak mungkin.
 # C:\Windows\System32\Wbem (key C:/Windows/System32/Wbem, mtime 1646994033): 154 files, tidak tidak mungkin.
-# . (key c:/Users/ASUS/Documents/GitHub/Proglan-Siakad_Pt2, mtime 1654931162): 9 files, tidak tidak mungkin.
+# . (key c:/Users/ASUS/Documents/GitHub/Proglan-Siakad_Pt2, mtime 1654938205): 9 files, tidak tidak mungkin.
 # C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common (key C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common, mtime 1628557406): 10 files, tidak tidak mungkin.
 # C:\MinGW\bin (key C:/MinGW/bin, mtime 1649386728): 145 files, tidak tidak mungkin.
 # C:\Windows\System32\OpenSSH\: tidak dapat melihat statistik.
 # C:\Windows (key C:/Windows, mtime 1652793667): 131 files, tidak tidak mungkin.
 # C:\Users\ASUS\AppData\Local\Programs\Python\Python310\ (key C:/Users/ASUS/AppData/Local/Programs/Python/Python310/, mtime 1652793697): 18 files, tidak tidak mungkin.
-# src (key c:/Users/ASUS/Documents/GitHub/Proglan-Siakad_Pt2/src, mtime 1654931161): Tidak files, tidak tidak mungkin sejauh ini.
+# src (key c:/Users/ASUS/Documents/GitHub/Proglan-Siakad_Pt2/src, mtime 1654938165): Tidak files, tidak tidak mungkin sejauh ini.
 # C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps (key C:/Users/ASUS/AppData/Local/Microsoft/WindowsApps, mtime 1653910776): 19 files, tidak tidak mungkin.
 # C:\Users\ASUS\AppData\Local\Programs\Python\Python310\Scripts\ (key C:/Users/ASUS/AppData/Local/Programs/Python/Python310/Scripts/, mtime 1652793697): 5 files, tidak tidak mungkin.
 # C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/ASUS/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1654860268): 4 files, tidak tidak mungkin.
@@ -325,6 +323,8 @@ src/mahasiswa.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Selesai membuat Make data base pada Sat Jun 11 14:11:02 2022
+# Selesai membuat Make data base pada Sat Jun 11 17:37:39 2022
 
  
+make.exe: *** Tidak terdapat aturan untuk membuat target `all'. Berhenti.
+
