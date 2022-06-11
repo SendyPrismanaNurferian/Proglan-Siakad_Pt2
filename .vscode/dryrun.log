@@ -7,6 +7,5 @@ g++ --std=c++17 -O3 -Wall -Wextra -I. -c -o src/dosen.o src/dosen.cpp
 g++ --std=c++17 -O3 -Wall -Wextra -I. -c -o src/tendik.o src/tendik.cpp
 g++ --std=c++17 -O3 -Wall -Wextra -I. -c -o src/matakuliah.o src/matakuliah.cpp
 g++ --std=c++17 -O3 -Wall -Wextra -I. -o sim src/main.o src/person.o src/mahasiswa.o src/dosen.o src/tendik.o src/matakuliah.o
- 
 make.exe: Leaving directory `c:/Users/ASUS/Documents/GitHub/Proglan-Siakad_Pt2'
  

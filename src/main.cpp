@@ -72,7 +72,7 @@ int main(){
                 cin >> jeniskelamin;
                 cout << "Masukkan Tanggal Lahir : ";
                 cin >> dd;
-                cout << "Masukkan Bulan Lahir : ";
+                cout << "Masukkan Bulan Lahir : (Angka)";
                 cin >> mm;
                 cout << "Masukkan Tahun Lahir : ";
                 cin >> yy;
@@ -123,7 +123,7 @@ int main(){
                 cin >> jeniskelamin;
                 cout << "Masukkan Tanggal Lahir : ";
                 cin >> dd;
-                cout << "Masukkan Bulan Lahir : ";
+                cout << "Masukkan Bulan Lahir : (Angka)";
                 cin >> mm;
                 cout << "Masukkan Tahun Lahir : ";
                 cin >> yy;
@@ -157,7 +157,7 @@ int main(){
                 cin >> jeniskelamin;
                 cout << "Masukkan Tanggal Lahir : ";
                 cin >> dd;
-                cout << "Masukkan Bulan Lahir : ";
+                cout << "Masukkan Bulan Lahir : (Angka)";
                 cin >> mm;
                 cout << "Masukkan Tahun Lahir : ";
                 cin >> yy;
