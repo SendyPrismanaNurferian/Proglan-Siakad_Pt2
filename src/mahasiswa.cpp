@@ -45,6 +45,11 @@ int mahasiswa::getTahunmasuk()
     return this->tahunmasuk;
 }
 
+float mahasiswa::getIPK()
+{
+    return this->ipk;
+}
+
 void mahasiswa::setSemester(int semesterke)
 {
 	this->semesterke = semesterke;
@@ -116,7 +121,7 @@ void mahasiswa::TampilDaftarMatkul()
 	for(int i = 0; i < this->DaftarMataKuliah.size(); i++){
 		std::cout << this->DaftarMataKuliah[i];
 		if(i != (this->DaftarMataKuliah.size()-1)){
-			std::cout << ",";
+			std::cout << ", ";
 		}
 	}
 }

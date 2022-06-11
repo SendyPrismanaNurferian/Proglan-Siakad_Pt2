@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm> //saya tambahkan agar nantinya tidak terjadi error saat matkul
-//include*****.hpp merupakan header file code yang sudah dibuat dan bisa digunakan kembali
 #include "include/person.hpp"
 #include "include/mahasiswa.hpp"
 #include "include/dosen.hpp"
@@ -18,20 +17,22 @@ int main(){
 	vector<tendik> recTendik;
     vector<MataKuliah> recMatkul;
 
-    //Menu untuk pilihan user awal
-	int menu_terpilih;
-    //Menu untuk pilihan user akhir
-    char EndNext;
-    //Pemberi ID pada tiap person di ID Mahasiswa, Dosen, Tendik
+    //Pemberi ID pada tiap person di ID Mahasiswa, Dosen, Tendik 
     int IDMhsw = 0;
     int IDDsn = 0;
     int IDTndk = 0;
     int IDMataKuliah = 0;
-
+    //Menu untuk pilihan user awal
+	int menu_terpilih;
+    //Menu untuk pilihan user akhir
+    //Char EndNext ini sebagai menu pilihan, nantinya sebagai opsi program yang terakhir
+    char EndNext;
+    
 	while(1){
+        //system akan membersihkan layar konsol
         system("clear");
 		cout << "Selamat datang di Universitas Kembang Lambe Tunas Bangsa" << endl << endl;
-		cout << "Data Statistik:" << endl;
+		cout << "Data Statistik :" << endl;
 		cout << "  1. Jumlah Mahasiswa             : " << recMhs.size() << "mahasiswa" << endl;
 		cout << "  2. Jumlah Dosen                 : " << recDosen.size() << "dosen" << endl;
 		cout << "  3. Jumlah Tenaga Kependidikan   : " << recTendik.size() << "tenaga kependidikan" << endl;
@@ -49,12 +50,14 @@ int main(){
 		cout << "  8. Tampilkan semua Dosen" << endl;
 		cout << "  9. Tampilkan semua Tenaga Kependidikan" << endl;
         cout << "  10. Tampilkan Semua Mata Kuliah" << endl;
-		cout << "-> Silahkan memilih salah satu Menu : ";
+
 		cin >> menu_terpilih;
+
 
 		switch(menu_terpilih){
 			case 1:{
-                system("clear"); //system akan membersihkan layar konsol
+                //system akan membersihkan layar konsol
+                system("clear"); 
                 IDMhsw++;
                 string id, nama, jeniskelamin, nrp, departemen;
                 int dd, mm, yy, tahunmasuk, semesterke, skslulus;
@@ -91,18 +94,22 @@ int main(){
                     cin >> ips_temp; cin.ignore();
                     ips.push_back(ips_temp);
                 }
+                
                 //Menetapkan inputan yang di masukkan ke object penyimpan yaitu inputMhs
                 mahasiswa inputMhs = mahasiswa(id, nama, jeniskelamin, dd, mm, yy, nrp, departemen, tahunmasuk);
+                //Fungsi logika untuk semester,sks lulus, dan IPS
                 inputMhs.setSemester(semesterke);
                 inputMhs.setSKSLulus(skslulus);
                 for(int i = 1; i < semesterke; i++){
                     inputMhs.setIPS(i, ips[i-1]);
                 }
+                
                 //Data di push_back dari inputMhs ke vector recMhs dijadikan sebagai database
                 recMhs.push_back(inputMhs);
             } break;
 
 			case 2:{
+                //system akan membersihkan layar konsol
                 system("clear");
                 IDDsn++;
                 string id, nama,jeniskelamin, npp, departemen, pendidikan;
@@ -127,13 +134,16 @@ int main(){
                 getline(cin, departemen);
                 cout << "Masukkan Pendidikan : ";
                 getline(cin, pendidikan);
+                
                 //Menetapkan inputan yang di masukkan ke object penyimpan yaitu inputDosen
                 dosen inputDosen = dosen(id, nama, jeniskelamin, dd, mm, yy, npp, departemen, pendidikan);
+                
                 //Data di push_back dari inputDosen ke vector recDosen dijadikan sebagai database
                 recDosen.push_back(inputDosen);
             } break;
 
 			case 3:{
+                //system akan membersihkan layar konsol
                 system("clear");
                 IDTndk++;
                 string id, nama, jeniskelamin, npp, unit;
@@ -156,26 +166,29 @@ int main(){
                 cout << "Masukkan Unit : ";
                 cin.ignore();
                 getline(cin, unit);
+               
                 //Menetapkan inputan yang di masukkan ke object penyimpan yaitu inputDosen
                 tendik inputTendik = tendik(id, nama, jeniskelamin, dd, mm, yy, npp, unit);
+               
                 //Data di push_back dari inputTendik ke vector recDosen dijadikan sebagai database
                 recTendik.push_back(inputTendik);
             } break;
 
 			case 4:{
-                 system("clear");
-                 char tampilkanIPS;
-                // pilihan buat nunjukin detail ips atau tidak
+                //system akan membersihkan layar konsol
+                system("clear");
+                char tampilkanIPS;
+                //Fungsi untuk nantinya User memilih menampan IPS atau tidak
                 label2:
-                cout << "apakah anda ingin melihat rincian ip per semester (IPS) juga (y/n): ";
+                cout << "Apakah Anda melihat Rincian IP per Semester (IPS)? Tekan y/Y untuk Ya dan n/N untuk Tidak (y/n) : ";
                 cin >> tampilkanIPS;
                 if(tampilkanIPS != 'y' && tampilkanIPS != 'Y' && tampilkanIPS != 'n' && tampilkanIPS != 'N'){
-                    cout << "input salah" << endl;
+                    cout << "Input yang Anda masukkan Salah" << endl;
                     goto label2;
                 }
                 // menampilkan data
                 for(int i = 0; i < IDMhsw; i++){
-                    cout << i+1 << ". data mahasiswa dengan id: " << recMhs[i].getId() << endl;
+                    cout << i+1 << ". Data Mahasiswa dengan ID: " << recMhs[i].getId() << endl;
                     cout << "Nama        : " << recMhs[i].getNama() << endl;
                     cout << "Jenis Kelamin   : " << recMhs[i].getjeniskelamin() << endl;
                     cout << "dd/mm/yy    : " << recMhs[i].getTglLahir() << "/" << recMhs[i].getBulanLahir() << "/" << recMhs[i].getTahunLahir() << endl;
@@ -235,6 +248,7 @@ int main(){
             } break;
 
             case 7:{
+                //system akan membersihkan layar konsol
                 system("clear");
                 //Menampilkan Menu Mata Kuliah 
                 IDMataKuliah++;
@@ -242,7 +256,7 @@ int main(){
                 string id;
                 int bebansks;
                 //Input Data Mata Kuliah
-                id  = "matkul" + to_string(IDMataKuliah);
+                id  = "Matkul" + to_string(IDMataKuliah);
                 cout << "Masukkan Mata Kuliah : ";
                 cin.ignore();
                 getline(cin, nama_matakuliah);
@@ -256,6 +270,7 @@ int main(){
             } break;
 
             case 8:{
+                //system akan membersihkan layar konsol
                 system("clear");
                 // Menginput dan Mengambil Data Dosen yang ingin didaftarkan ke Mata Kuliah 
                 int IndeksDosen, IndeksMataKuliah;
@@ -292,6 +307,7 @@ int main(){
             } break;
 
             case 9:{
+                //system akan membersihkan layar konsol
                 system("clear");
                 //Menginput dan Mengambil Data Mahasiswa yang ingin ditambakan menjadi peserta di dalam Database Matkul
                 int IndeksMhs, IndeksMataKuliah;
@@ -319,7 +335,7 @@ int main(){
                     break;
                 }
 
-                //Menetapkan Dosen ke Mata Kuliah
+                //Menetapkan Mahasiswa ke Mata Kuliah
                 DataMhs temp;
                 temp.nama = recMhs[IndeksMhs].getNama();
                 temp.nrp = recMhs[IndeksMhs].getNRP();
@@ -328,6 +344,7 @@ int main(){
             } break;
 
             case 10:{
+                //system akan membersihkan layar konsol
                 system("clear");
                 char tampilkanDatabase;
                 label3:
@@ -343,20 +360,20 @@ int main(){
                 //Fungsi Menampilkan Database yang Terkait Mata Kuliah (Nama Matkul,Dosen Matkul,Mahasiswa Matkul)
                 //Menampilkan Data Mata Kuliah 
                 for(int i = 0; i < IDMataKuliah; i++){
-                    cout << i+1 << "Data Mata Kuliah dengan ID : " << recMatkul[i].getId() << endl;
-                    cout << "\tNama Mata Kuliah : " << recMatkul[i].getNama() << endl;
-                    cout << "\tBeban SKS Mata Kuliah ini :  " << recMatkul[i].getBebanSKS();
+                    cout << i+1 << ". Data Mata Kuliah dengan ID : " << recMatkul[i].getId() << endl;
+                    cout << "\t Nama Mata Kuliah : " << recMatkul[i].getNama() << endl;
+                    cout << "\t Beban SKS Mata Kuliah ini :  " << recMatkul[i].getBebanSKS();
                     if(tampilkanDatabase == 'y' || tampilkanDatabase == 'Y'){
                     //Menampilkan Database Dosen
                     cout << "\tData dari Dosen pada Mata Kuliah ini : " << recMatkul[i].getNama() <<": \n";
                     for(int j = 0; j < recMatkul[i].getDatabaseDsn().size(); j++){
                         cout << "\t\t" << j+1 << "." << (recMatkul[i].getDatabaseDsn())[j].nama;
-                        cout << "(" << (recMatkul[i].getDatabaseDsn())[j].npp << ") - ";
+                        cout << " (" << (recMatkul[i].getDatabaseDsn())[j].npp << ") - ";
                         cout << (recMatkul[i].getDatabaseDsn())[j].departemen << endl;
                     }
                     //Menampilkan Database Mahasiswa
                     cout << "\t Data dari Mahasiswa pada Mata Kuliah ini : " << recMatkul[i].getNama() <<" :\n";
-                    for(int j = 0; j < recMatkul[i].getDatabaseMhs().size(); j++){
+                    for(int j=0; j<recMatkul[i].getDatabaseMhs().size(); j++){
                         cout << "\t\t" << j+1 << "." << (recMatkul[i].getDatabaseMhs())[j].nama;
                         cout << "(" << (recMatkul[i].getDatabaseMhs())[j].nrp << ") - ";
                         cout << (recMatkul[i].getDatabaseMhs())[j].departemen << endl;
@@ -365,12 +382,13 @@ int main(){
                 cout << endl;
             }
 		} break;
-
+          
+          // Fungsi jika User tidak input atau input selain dari yang dimaksud program
           default:
-            cout << "Inpuy yang Anda masukkan salah!!!" << endl;
+            cout << "Input yang Anda masukkan salah!!!" << endl;
             break;
             }
-        //Choose menu untuk menjalankan/melanjutkan program lagi atau tidak
+        //Choose/Pemilihan menu untuk menjalankan/melanjutkan program lagi atau mengakhiri
         label:
         cout << "Apakah Anda akan menjalankan atau melanjutkan program? Tekan y/Y untuk Ya dan n/N untuk Tidak (y/n) : ";
         cin >> EndNext;
@@ -386,6 +404,7 @@ int main(){
 	return 0;
 }
 
+//Fungsi untuk mencari nama ke databse Dosen, Mahasiswa yang berada di database Mata Kuliah
 template <typename T> int DatabaseCariNama(T &rec, string inputNama){
     string inputNama_hurufbesar, inputNama_hurufkecil, nama_hurufkecil, nama_hurufbesar;
 
@@ -394,7 +413,7 @@ template <typename T> int DatabaseCariNama(T &rec, string inputNama){
     inputNama_hurufbesar = inputNama;
     transform(inputNama_hurufbesar.begin(), inputNama_hurufbesar.end(), inputNama_hurufbesar.begin(), ::toupper);
 
-    for(int i + 0; i < rec.size(); i++){
+    for(int i = 0; i < rec.size(); i++){
         nama_hurufkecil = rec[i].getNama();
         transform(inputNama_hurufkecil.begin(), inputNama_hurufkecil.end(), inputNama_hurufkecil.begin(), ::tolower);
         nama_hurufbesar = rec[i].getNama();

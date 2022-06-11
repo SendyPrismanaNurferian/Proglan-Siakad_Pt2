@@ -3,7 +3,9 @@
 
 
 #include <iostream>
+#include <vector>
 #include "include/person.hpp"
+
 
 class mahasiswa : public person {
 private:
@@ -20,7 +22,7 @@ private:
 public:
 	mahasiswa(std::string id, std::string nama, std::string jeniskelamin, int dd, int mm, int yy,
 					std::string nrp, std::string departemen, int tahunmasuk); 
-//Fungsi untuk akses NPP
+//Fungsi untuk akses NRP
     void setNRP(std::string nrp);
     std::string getNRP();
 //Fungsi untuk akses Departemen
