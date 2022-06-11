@@ -72,7 +72,7 @@ int main(){
                 cin >> jeniskelamin;
                 cout << "Masukkan Tanggal Lahir : ";
                 cin >> dd;
-                cout << "Masukkan Bulan Lahir : (Angka)";
+                cout << "Masukkan Bulan Lahir (Angka) : ";
                 cin >> mm;
                 cout << "Masukkan Tahun Lahir : ";
                 cin >> yy;
@@ -123,7 +123,7 @@ int main(){
                 cin >> jeniskelamin;
                 cout << "Masukkan Tanggal Lahir : ";
                 cin >> dd;
-                cout << "Masukkan Bulan Lahir : (Angka)";
+                cout << "Masukkan Bulan Lahir (Angka) : ";
                 cin >> mm;
                 cout << "Masukkan Tahun Lahir : ";
                 cin >> yy;
@@ -157,7 +157,7 @@ int main(){
                 cin >> jeniskelamin;
                 cout << "Masukkan Tanggal Lahir : ";
                 cin >> dd;
-                cout << "Masukkan Bulan Lahir : (Angka)";
+                cout << "Masukkan Bulan Lahir (Angka) : ";
                 cin >> mm;
                 cout << "Masukkan Tahun Lahir : ";
                 cin >> yy;
@@ -188,19 +188,19 @@ int main(){
                 }
                 // menampilkan data
                 for(int i = 0; i < IDMhsw; i++){
-                    cout << i+1 << ". Data Mahasiswa dengan ID: " << recMhs[i].getId() << endl;
-                    cout << "Nama        : " << recMhs[i].getNama() << endl;
-                    cout << "Jenis Kelamin   : " << recMhs[i].getjeniskelamin() << endl;
-                    cout << "dd/mm/yy    : " << recMhs[i].getTglLahir() << "/" << recMhs[i].getBulanLahir() << "/" << recMhs[i].getTahunLahir() << endl;
-                    cout << "NRP         : " << recMhs[i].getNRP() << endl;
-                    cout << "Departemen  : " << recMhs[i].getDepartemen() << endl;
-                    cout << "Tahun Masuk : " << recMhs[i].getTahunmasuk() << endl;
-                    cout << "Semester ke : " << recMhs[i].getSemester() << endl;
-                    cout << "SKS Lulus   : " << recMhs[i].getSKSLulus() << endl;
-                    printf ("IPK         : %.2f\n", recMhs[i].getIPK());
+                    cout << i+1 << ". Data Mahasiswa dengan ID : " << recMhs[i].getId() << endl;
+                    cout << "\tNama            : " << recMhs[i].getNama() << endl;
+                    cout << "\tJenis Kelamin   : " << recMhs[i].getjeniskelamin() << endl;
+                    cout << "\tdd/mm/yy        : " << recMhs[i].getTglLahir() << "/" << recMhs[i].getBulanLahir() << "/" << recMhs[i].getTahunLahir() << endl;
+                    cout << "\tNRP             : " << recMhs[i].getNRP() << endl;
+                    cout << "\tDepartemen      : " << recMhs[i].getDepartemen() << endl;
+                    cout << "\tTahun Masuk     : " << recMhs[i].getTahunmasuk() << endl;
+                    cout << "\tSemester ke     : " << recMhs[i].getSemester() << endl;
+                    cout << "\tSKS Lulus       : " << recMhs[i].getSKSLulus() << endl;
+                    printf ("\tIPK             : %.2f\n", recMhs[i].getIPK());
                     // menampilkan detail ips
                     if(tampilkanIPS == 'y' || tampilkanIPS == 'Y'){
-                        cout << "   rincian IPS :\n";
+                        cout << "   Rincian IPS :\n";
                         for(int j = 1; j < recMhs[i].getSemester(); j++){
                             cout << "\tsem" << j;
                         }
@@ -213,7 +213,7 @@ int main(){
                     // menampilkan matkul dan sks semester ini
                     cout << "\tSKS Tempuh Semester ini : ";
                     if(recMhs[i].getSKSTempuh() == 0){
-                        cout << "belum menempuh sks di semester ini" << endl;
+                        cout << "Mahasiswa Belum Menempuh SKS di Semester Ini" << endl;
                     } else{
                         cout << recMhs[i].getSKSTempuh() << endl;
                     }
@@ -223,27 +223,31 @@ int main(){
             } break;
 
 			case 5:{
+                //system akan membersihkan layar konsol
+                system("clear");
                 // Menampilkan data dari Dosen
                 for(int i = 0; i < IDDsn; i++){
                     cout << i+1 << ". Data Dosen ber-ID: " << recDosen[i].getId() << endl;
-                    cout << "Nama            : " << recDosen[i].getNama() << endl;
-                    cout << "Jenis Kelamin   : " << recDosen[i].getjeniskelamin() << endl;
-                    cout << "dd/mm/yy        : " << recDosen[i].getTglLahir() << "-" << recDosen[i].getBulanLahir() << "-" << recDosen[i].getTahunLahir() << endl;
-                    cout << "NPP             : " << recDosen[i].getNPP() << endl;
-                    cout << "Departemen      : " << recDosen[i].getDepartemen() << endl;
-                    cout << "Pendidikan      : " << recDosen[i].getPendidikan() << endl << endl;
+                    cout << "\tNama            : " << recDosen[i].getNama() << endl;
+                    cout << "\tJenis Kelamin   : " << recDosen[i].getjeniskelamin() << endl;
+                    cout << "\tdd/mm/yy        : " << recDosen[i].getTglLahir() << "-" << recDosen[i].getBulanLahir() << "-" << recDosen[i].getTahunLahir() << endl;
+                    cout << "\tNPP             : " << recDosen[i].getNPP() << endl;
+                    cout << "\tDepartemen      : " << recDosen[i].getDepartemen() << endl;
+                    cout << "\tPendidikan      : " << recDosen[i].getPendidikan() << endl << endl;
                 }
             } break;
 
 			case 6:{
+                //system akan membersihkan layar konsol
+                system("clear");
                 // Menampilkan data dari Tendik
                 for(int i = 0; i < IDTndk; i++){
                     cout << i+1 << ". Data Tendik ber-ID: " << recTendik[i].getId() << endl;
-                    cout << "Nama            : " << recTendik[i].getNama() << endl;
-                    cout << "Jenis Kelamin   : " << recTendik[i].getjeniskelamin() << endl;
-                    cout << "dd/mm/yy        : " << recTendik[i].getTglLahir() << "-" << recTendik[i].getBulanLahir() << "-" << recTendik[i].getTahunLahir() << endl;
-                    cout << "NPP             : " << recTendik[i].getNPP() << endl;
-                    cout << "Unit            : " << recTendik[i].getUnit() << endl << endl;
+                    cout << "\tNama            : " << recTendik[i].getNama() << endl;
+                    cout << "\tJenis Kelamin   : " << recTendik[i].getjeniskelamin() << endl;
+                    cout << "\tdd/mm/yy        : " << recTendik[i].getTglLahir() << "-" << recTendik[i].getBulanLahir() << "-" << recTendik[i].getTahunLahir() << endl;
+                    cout << "\tNPP             : " << recTendik[i].getNPP() << endl;
+                    cout << "\tUnit            : " << recTendik[i].getUnit() << endl << endl;
                 }
             } break;
 
@@ -257,15 +261,17 @@ int main(){
                 int bebansks;
                 //Input Data Mata Kuliah
                 id  = "Matkul" + to_string(IDMataKuliah);
-                cout << "Masukkan Mata Kuliah : ";
+                cout << "Masukkan Nama Mata Kuliah : ";
                 cin.ignore();
                 getline(cin, nama_matakuliah);
                 cout << "Masukkan Beban SKS dari 2-6 : ";
                 cin >> bebansks;
                 cin.ignore();
-                //Menetapkan inputan yang di masukkan ke object penyimpan yaitu inputDosen
+                
+                //Menetapkan inputan yang di masukkan ke object penyimpan yaitu inputMataKuliah
                 MataKuliah inputMataKuliah = MataKuliah(id, nama_matakuliah, bebansks);
-                //Data di push_back dari inputDosen ke vector recDosen dijadikan sebagai database
+               
+                //Data di push_back dari inputMataKuliah ke vector recMatkul dijadikan sebagai database
                 recMatkul.push_back(inputMataKuliah);
             } break;
 
@@ -361,8 +367,8 @@ int main(){
                 //Menampilkan Data Mata Kuliah 
                 for(int i = 0; i < IDMataKuliah; i++){
                     cout << i+1 << ". Data Mata Kuliah dengan ID : " << recMatkul[i].getId() << endl;
-                    cout << "\t Nama Mata Kuliah : " << recMatkul[i].getNama() << endl;
-                    cout << "\t Beban SKS Mata Kuliah ini :  " << recMatkul[i].getBebanSKS();
+                    cout << "\t Nama Mata Kuliah          : " << recMatkul[i].getNama() << endl;
+                    cout << "\t Beban SKS Mata Kuliah ini : " << recMatkul[i].getBebanSKS() << endl;
                     if(tampilkanDatabase == 'y' || tampilkanDatabase == 'Y'){
                     //Menampilkan Database Dosen
                     cout << "\tData dari Dosen pada Mata Kuliah ini : " << recMatkul[i].getNama() <<": \n";
