@@ -17,7 +17,7 @@ int main(){
 	vector<tendik> recTendik;
     vector<MataKuliah> recMatkul;
 
-    //Pemberi ID pada tiap person di ID Mahasiswa, Dosen, Tendik 
+    //Pemberi ID pada tiap person di ID Mahasiswa, Dosen, Tendik, MataKuliah
     int IDMhsw = 0;
     int IDDsn = 0;
     int IDTndk = 0;
@@ -186,9 +186,9 @@ int main(){
                     cout << "Input yang Anda masukkan Salah" << endl;
                     goto label2;
                 }
-                // menampilkan data
+                // Menampilkan Data Mahasiswa
                 for(int i = 0; i < IDMhsw; i++){
-                    cout << i+1 << ". Data Mahasiswa dengan ID : " << recMhs[i].getId() << endl;
+                    cout << i+1 << " Data Mahasiswa dengan ID : " << recMhs[i].getId() << endl;
                     cout << "\tNama            : " << recMhs[i].getNama() << endl;
                     cout << "\tJenis Kelamin   : " << recMhs[i].getjeniskelamin() << endl;
                     cout << "\tdd/mm/yy        : " << recMhs[i].getTglLahir() << "/" << recMhs[i].getBulanLahir() << "/" << recMhs[i].getTahunLahir() << endl;
@@ -198,7 +198,7 @@ int main(){
                     cout << "\tSemester ke     : " << recMhs[i].getSemester() << endl;
                     cout << "\tSKS Lulus       : " << recMhs[i].getSKSLulus() << endl;
                     printf ("\tIPK             : %.2f\n", recMhs[i].getIPK());
-                    // menampilkan detail ips
+                    // Menampilkan detail IPS
                     if(tampilkanIPS == 'y' || tampilkanIPS == 'Y'){
                         cout << "   Rincian IPS :\n";
                         for(int j = 1; j < recMhs[i].getSemester(); j++){
@@ -210,7 +210,7 @@ int main(){
                         }
                         cout << endl;
                     }
-                    // menampilkan matkul dan sks semester ini
+                    // Menampilkan Matkul dan SKS Semester ini
                     cout << "\tSKS Tempuh Semester ini : ";
                     if(recMhs[i].getSKSTempuh() == 0){
                         cout << "Mahasiswa Belum Menempuh SKS di Semester Ini" << endl;
@@ -354,7 +354,7 @@ int main(){
                 system("clear");
                 char tampilkanDatabase;
                 label3:
-                //Chosse menu apakah ingin lihat list nahasiswa dan dosen yang ada di dalam suatu mata kuliah
+                //Chosse menu apakah ingin lihat list nama nahasiswa dan dosen yang ada di dalam suatu mata kuliah
                 cout << "Apakah Anda Ingin Melihat list Nama Dosen dan Mahasiswa yang ada dalam Mata Kuliah? Tekan y/Y untuk Ya dan n/N untuk Tidak (y/n) : ";
                 cin >> tampilkanDatabase;
                 cin.ignore();
@@ -389,7 +389,7 @@ int main(){
             }
 		} break;
           
-          // Fungsi jika User tidak input atau input selain dari yang dimaksud program
+          //Fungsi jika User tidak input atau input selain dari yang dimaksud program
           default:
             cout << "Input yang Anda masukkan salah!!!" << endl;
             break;
